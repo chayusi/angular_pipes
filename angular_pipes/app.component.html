@@ -1,0 +1,47 @@
+<h1> Text-Format-Pipes | Number-Format-Pipes | Date-Pipes</h1>
+  <div>
+  <p>Today's date :- {{presentDate}}</p>
+  </div>
+  <div>
+  <p>Today's date :- {{presentDate | date }}</p>
+  </div>
+  <div>
+  <p>Short date :- {{presentDate | date:'shortDate' }} <br/></p>
+  <p>Full date :- {{presentDate | date:'fullDate'}} <br/></p>
+  <p>Formatted date :- {{presentDate | date:'M/dd/yyyy'}} <br/></p>
+  <p>Hours and minutes :- {{presentDate | date:'h:mm'}} </p>
+  </div>
+
+  <hr/>
+  
+  <h1>Currency Pipes</h1>
+  <p>{{ price | currency:'':true}}</p>
+  <p>{{ price | currency:'INR'}}</p>
+  
+  <hr/>
+
+  <h1>Decimal Pipes</h1>
+  <p> Apply formatting:- {{decimalNum1 | number:'3.1'}}</p>
+  <p> Apply formatting:- {{decimalNum2 | number: '2.1-4'}}</p>
+  
+  <hr/>
+
+  <h1>Json Pipes</h1>
+  <P>Object: {{date | json}}</P>
+  
+  <hr/>
+
+  <h1>Percent Pipes</h1>
+<div>
+<p>A: {{ a | percent }}</p>
+<p>B: {{ b | percent: '4.3-5' }}</p>
+<p>C: {{ c | percent }}</p>
+</div>
+
+  <hr/>
+
+  <h1>Slice Pipes</h1>
+  <h3>Start index:- {{Fruits | slice:2}}</h3>
+  <h4>Start and end index:- {{Fruits | slice:1:4}}</h4>
+  <h5>Negative index:- {{Fruits | slice:-2}}</h5>
+  <h6>Negative start and end index:- {{Fruits | slice:-4:-2}}</h6>
